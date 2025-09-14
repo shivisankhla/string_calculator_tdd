@@ -9,5 +9,9 @@ RSpec.describe StringCalculator do
     it "accepts a argument" do
       expect { StringCalculator.add("1,2,3") }.not_to raise_error
     end
+
+    it "raises an error if input is not a string" do
+      expect { StringCalculator.add(123) }.to raise_error(ArgumentError)
+    end
   end
 end
