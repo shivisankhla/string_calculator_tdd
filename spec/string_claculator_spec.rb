@@ -21,5 +21,10 @@ RSpec.describe StringCalculator do
     it "returns the number itself for a single number" do
       expect(StringCalculator.add("5")).to eq(5)
     end
+
+    it "adds comma-separated numbers" do
+      expect(StringCalculator.add("1,5")).to eq(6)
+    end
+
   end
 end
