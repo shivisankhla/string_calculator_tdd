@@ -26,5 +26,9 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.add("1,5")).to eq(6)
     end
 
+    it "handles multiple numbers" do
+      expect(StringCalculator.add("1,2,3,4")).to eq(10)
+    end
+
   end
 end
