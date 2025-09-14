@@ -13,5 +13,9 @@ RSpec.describe StringCalculator do
     it "raises an error if input is not a string" do
       expect { StringCalculator.add(123) }.to raise_error(ArgumentError)
     end
+
+    it "returns 0 for an empty string" do
+      expect(StringCalculator.add("")).to eq(0)
+    end
   end
 end
